@@ -13,7 +13,7 @@ This is intended to provide industrial engineers and others interested in the fi
 
 Two repos make up the standard project providing an end-to-end pipeline going from a Raspberry Pi to a React-based frontend interface.
 
-This is a frontend repo and contains a simple interface with numerical displays and line graphs (single parameter).
+This is the frontend repo and contains a simple interface with numerical displays and line graphs (single parameter).
 
 For the backend scripts see the [scripts repo](https://github.com/darius-all-new/data-pipeline-experiments-scripts).
 
@@ -55,13 +55,21 @@ Here's how to get it running:
    npm install
    ```
 
-4. Start up the development server.
+4. Set your Cloudflare worker URL:
+
+In `src/pages/Dashboard.tsx` replace the placeholder with your Cloudflare worker URL.
+
+```
+const dataEndpoint = "REPLACE WITH YOUR CLOUDFLARE ENDPOINT";
+```
+
+5. Start up the development server.
 
    ```
    npm run dev
    ```
 
-5. Open your web browser and visit `http://localhost:5174`. You should see 3 numerical displays and 3 line graphs (all empty until you start the data streams!).
+6. Open your web browser and visit `http://localhost:5174`. You should see 3 numerical displays and 3 line graphs (all empty until you start the data streams!).
 
 If you encounter any issues or have any questions, please don't hesitate to reach out.
 
